@@ -16,4 +16,10 @@
         </createTable>
     </changeSet>
 
+    <changeSet id="create_column_CharCode" author="skillbox">
+       <addColumn tableName="currency">
+           <column name ="char_code" type="varchar(255)"/>
+       </addColumn>
+    </changeSet>
+
 </databaseChangeLog>
