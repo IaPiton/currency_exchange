@@ -12,7 +12,6 @@ import ru.skillbox.currency.exchange.repository.CurrencyRepository;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Slf4j
 @Service
@@ -41,7 +40,6 @@ public class CurrencyService {
     public List<CurrencyAllDto> getAll() {
         log.info("CurrencyService method getAll");
         List<Currency> currencies = repository.findAll();
-
         List<CurrencyAllDto> currencyAllDtoList = new ArrayList<>();
         for (Currency currency : currencies){
             CurrencyAllDto currencyAllDto = new CurrencyAllDto();
