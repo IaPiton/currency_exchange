@@ -16,9 +16,8 @@ public class XmlHttpClient {
                 .uri(URI.create(url))
                 .GET()
                 .build();
-        HttpResponse<String> response = null;
         try {
-            response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+            HttpResponse<String>  response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }

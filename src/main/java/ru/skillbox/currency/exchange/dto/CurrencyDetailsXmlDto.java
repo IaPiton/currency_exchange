@@ -1,7 +1,9 @@
 package ru.skillbox.currency.exchange.dto;
 
-import javax.xml.bind.annotation.XmlElement;
+import lombok.Setter;
 
+import javax.xml.bind.annotation.XmlElement;
+@Setter
 public final class CurrencyDetailsXmlDto {
     private  String name;
     private  Long nominal;
@@ -28,20 +30,4 @@ public final class CurrencyDetailsXmlDto {
     public String getCharCode() {
         return charCode;
     }
-    public void setValue(String value) {
-        this.value = value;
-    }
-    public void setIsoNumCode(Long isoNumCode) {
-        this.isoNumCode = isoNumCode;
-    }
-    public void setCharCode(String charCode) {
-        this.charCode = charCode;
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public void setNominal(Long nominal) {
-        this.nominal = nominal;
-    }
-
 }
