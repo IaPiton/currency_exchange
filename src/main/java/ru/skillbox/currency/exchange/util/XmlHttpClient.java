@@ -18,9 +18,10 @@ public class XmlHttpClient {
                 .build();
         try {
             HttpResponse<String>  response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+            return response.body();
         } catch (IOException | InterruptedException e) {
             throw new RuntimeException(e);
         }
-        return response.body();
+
     }
 }
